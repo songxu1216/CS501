@@ -67,7 +67,6 @@ class FlashCardActivity : AppCompatActivity() {
             val operator = if (Random.nextBoolean()) "+" else "-"
             val operand1 = Random.nextInt(1, 100)
             val operand2 = Random.nextInt(1, 21)
-
             val problem = Problem(operand1, operand2, operator)
             problems.add(problem)
         }

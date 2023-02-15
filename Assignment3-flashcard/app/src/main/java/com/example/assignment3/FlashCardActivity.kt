@@ -4,13 +4,16 @@ import android.os.Bundle
 import android.os.Parcel
 import android.os.Parcelable
 import android.support.v7.app.AppCompatActivity
-import android.widget.*
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
 import kotlin.random.Random
 
 
 class FlashCardActivity : AppCompatActivity() {
-    private lateinit var generateButton: Button
-    private lateinit var submitButton: Button
+    lateinit var generateButton: Button
+    lateinit var submitButton: Button
     private lateinit var problemTextView: TextView
     private lateinit var answerEditText: EditText
 
@@ -93,7 +96,7 @@ class FlashCardActivity : AppCompatActivity() {
         outState.putParcelableArrayList(KEY_PROBLEMS, ArrayList(problems))
     }
 
-    private fun generateProblems(): ArrayList<Problem> {
+    fun generateProblems(): ArrayList<Problem> {
         val problems = ArrayList<Problem>()
 
         for (i in 1..10) {
